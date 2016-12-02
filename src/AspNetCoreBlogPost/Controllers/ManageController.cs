@@ -60,8 +60,13 @@ namespace AspNetCoreBlogPost.Controllers
                 PhoneNumber = await _userManager.GetPhoneNumberAsync(user),
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
-                BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
-            };
+                BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                City = user.City
+
+
+                };
             return View(model);
         }
 

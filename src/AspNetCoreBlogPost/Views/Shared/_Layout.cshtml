@@ -17,7 +17,7 @@
     </environment>
     @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 </head>
-<body>
+<body ng-app>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -43,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2016 - AspNetCoreBlogPost</p>
+            <p>&copy; 2016 - AspNetCoreBlogPost {{10 + 10}}</p>
         </footer>
     </div>
 
